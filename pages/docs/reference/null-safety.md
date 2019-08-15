@@ -185,8 +185,8 @@ the right hand side of the elvis operator. This can be very handy, for example, 
 <div class="sample" markdown="1" theme="idea" data-highlight-only>
 ```kotlin
 fun foo(node: Node): String? {
-    val parent = node.getParent() ?: return null
-    val name = node.getName() ?: throw IllegalArgumentException("name expected")
+    val parent = node?.getParent() ?: return null
+    val name = node?.getName() ?: throw IllegalArgumentException("name expected")
     // ...
 }
 ```
